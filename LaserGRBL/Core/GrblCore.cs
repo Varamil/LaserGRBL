@@ -1500,6 +1500,9 @@ namespace LaserGRBL
 		public int Executed
 		{ get { return mSent.Count; } }
 
+		public DetectedIssue LastIssue
+		{ get { return mTP.LastIssue; } }
+
 		public System.Collections.Generic.List<IGrblRow> SentCommand(int index, int count)
 		{
 			index = Math.Min(index, mSent.Count - 1);       //force index to be in range

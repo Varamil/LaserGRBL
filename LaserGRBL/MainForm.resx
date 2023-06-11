@@ -2731,7 +2731,7 @@
     <value>Buffer</value>
   </data>
   <data name="JogForm.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 128</value>
+    <value>233, 256</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
     <value>toolStripSeparator3</value>
