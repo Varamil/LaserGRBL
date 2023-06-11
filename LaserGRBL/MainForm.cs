@@ -220,6 +220,9 @@ namespace LaserGRBL
 				TTTLines.Text = Core.LoadedFile.Count.ToString();
 				//TTTLoadedIn.Text = elapsed.ToString() + " ms";
 				TTTEstimated.Text = Tools.Utils.TimeSpanToString(Core.LoadedFile.EstimatedTime, Tools.Utils.TimePrecision.Second, Tools.Utils.TimePrecision.Second, " ,", true);
+
+				TTTHeight.Text = string.Format("H: {0}",Core.LoadedFile.Range.MovingRange.Height);
+				TTTWidth.Text = string.Format("W: {0}",Core.LoadedFile.Range.MovingRange.Width);
 			}
 		}
 
