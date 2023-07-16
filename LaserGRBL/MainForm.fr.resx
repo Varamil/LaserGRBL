@@ -1645,4 +1645,13 @@
         AD//4AD//+AB///gAf//4AH///AD///wA/8=
 </value>
   </data>
+  <data name="MnChangeScale.Text" xml:space="preserve">
+    <value>&amp;Changer d'échelle</value>
+  </data>
+  <data name="TTTWidth.Text" xml:space="preserve">
+    <value>L: -</value>
+  </data>
+  <data name="TTTHeight.Text" xml:space="preserve">
+    <value>H: -</value>
+  </data>
 </root>
