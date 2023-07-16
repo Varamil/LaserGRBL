@@ -171,6 +171,7 @@ namespace LaserGRBL
             // 
             resources.ApplyResources(this.DIscaleX, "DIscaleX");
             this.DIscaleX.CurrentValue = 0F;
+            this.DIscaleX.DecimalPositions = 6;
             this.DIscaleX.Name = "DIscaleX";
             this.DIscaleX.CurrentValueChanged += new LaserGRBL.UserControls.NumericInput.DecimalInputBase.CurrentValueChangedDlg(this.DIscaleX_CurrentValueChanged);
             // 
@@ -178,6 +179,7 @@ namespace LaserGRBL
             // 
             resources.ApplyResources(this.DIscaleY, "DIscaleY");
             this.DIscaleY.CurrentValue = 0F;
+            this.DIscaleY.DecimalPositions = 6;
             this.DIscaleY.Name = "DIscaleY";
             this.DIscaleY.CurrentValueChanged += new LaserGRBL.UserControls.NumericInput.DecimalInputBase.CurrentValueChangedDlg(this.DIscaleY_CurrentValueChanged);
             // 

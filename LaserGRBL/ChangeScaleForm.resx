@@ -178,7 +178,7 @@
     <value>NoControl</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>189, 4</value>
+    <value>169, 4</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>14, 13</value>
@@ -208,7 +208,7 @@
     <value>23, 3</value>
   </data>
   <data name="DIscaleX.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 15</value>
+    <value>70, 15</value>
   </data>
   <data name="DIscaleX.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -229,10 +229,10 @@
     <value>Left</value>
   </data>
   <data name="DIscaleY.Location" type="System.Drawing.Point, System.Drawing">
-    <value>209, 3</value>
+    <value>189, 3</value>
   </data>
   <data name="DIscaleY.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 15</value>
+    <value>70, 15</value>
   </data>
   <data name="DIscaleY.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -355,7 +355,7 @@
     <value>NoControl</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>165, 4</value>
+    <value>155, 4</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>38, 13</value>
@@ -385,7 +385,7 @@
     <value>44, 3</value>
   </data>
   <data name="DIsizeX.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 15</value>
+    <value>60, 15</value>
   </data>
   <data name="DIsizeX.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -406,10 +406,10 @@
     <value>Left</value>
   </data>
   <data name="DIsizeY.Location" type="System.Drawing.Point, System.Drawing">
-    <value>209, 3</value>
+    <value>199, 3</value>
   </data>
   <data name="DIsizeY.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 15</value>
+    <value>60, 15</value>
   </data>
   <data name="DIsizeY.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -656,6 +656,9 @@
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>274, 157</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
