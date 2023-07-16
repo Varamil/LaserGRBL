@@ -317,7 +317,7 @@ namespace LaserGRBL
 				TTLEstimated.Text = Strings.MainFormEstimatedTime;
 
 			MnFileOpen.Enabled = Core.CanLoadNewFile;
-			MnSaveProject.Enabled = MnAdvancedSave.Enabled = MnSaveProgram.Enabled = MnOptimizePath.Enabled = Core.HasProgram;
+			MnSaveProject.Enabled = MnAdvancedSave.Enabled = MnSaveProgram.Enabled = MnOptimizePath.Enabled = MnChangeScale.Enabled = Core.HasProgram;
 			MnFileSend.Enabled = Core.CanSendFile;
 			MnStartFromPosition.Enabled = Core.CanSendFile;
 			MnRunMulti.Enabled = Core.CanSendFile || Core.CanResumeHold || Core.CanFeedHold;
@@ -1004,8 +1004,8 @@ namespace LaserGRBL
 
         private void MnChangeScale_Click(object sender, EventArgs e)
         {
-
-        }
+			ChangeScaleForm.CreateAndShowDialog(Core, this);
+		}
     }
 
 

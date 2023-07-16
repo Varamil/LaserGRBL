@@ -145,6 +145,7 @@ namespace LaserGRBL.UserControls.NumericInput
                 {
                     float oldvalue = _CurrentValue;
                     _CurrentValue = value;
+                    this.UpdateStatus();
                     CurrentValueChanged?.Invoke(this, oldvalue, value, byuser);
                 }
 
@@ -298,14 +299,17 @@ namespace LaserGRBL.UserControls.NumericInput
 
         protected virtual void UpdateStatus()
         {
-            if (this.InEdit)
-            {
-                // TB.Text = CurrentValue.ToString
-            }
-            else
-            {
-                TB.Text = CurrentValue.ToString(GetFormatString());
-            }
+            //if (this.InEdit)
+            //{
+            //    // TB.Text = CurrentValue.ToString
+            //}
+            //else
+            //{
+            //    TB.Text = CurrentValue.ToString(GetFormatString());
+            //}
+            string txt = CurrentValue.ToString(GetFormatString());
+            if (TB.Text != txt)
+                TB.Text = txt;
 
             LB.Text = TB.Text;
             if (this.InEdit)
