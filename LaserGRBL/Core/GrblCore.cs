@@ -739,6 +739,16 @@ namespace LaserGRBL
 			}
 		}
 
+		public void OptimizeCommands()
+		{
+			file.OptimizeCommands(Settings.GetObject<string>("Core.LastOpenFile", null));
+		}
+
+		public void ChangeScale(double scaleX, double scaleY)
+		{
+			file.ChangeScale(Settings.GetObject<string>("Core.LastOpenFile", null), scaleX, scaleY);
+		}
+
 		private ImageCodecInfo GetEncoder(ImageFormat format)
 		{
 			ImageCodecInfo[] codecs = ImageCodecInfo.GetImageDecoders();
@@ -1494,6 +1504,9 @@ namespace LaserGRBL
 
 		public int Executed
 		{ get { return mSent.Count; } }
+
+		public DetectedIssue LastIssue
+		{ get { return mTP.LastIssue; } }
 
 		public System.Collections.Generic.List<IGrblRow> SentCommand(int index, int count)
 		{

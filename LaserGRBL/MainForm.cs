@@ -220,6 +220,11 @@ namespace LaserGRBL
 				TTTLines.Text = Core.LoadedFile.Count.ToString();
 				//TTTLoadedIn.Text = elapsed.ToString() + " ms";
 				TTTEstimated.Text = Tools.Utils.TimeSpanToString(Core.LoadedFile.EstimatedTime, Tools.Utils.TimePrecision.Second, Tools.Utils.TimePrecision.Second, " ,", true);
+
+				char c = TTTHeight.Text.Length > 0 ? TTTHeight.Text[0] : 'H'; //to manage language
+				TTTHeight.Text = string.Format("{0}: {1}", c, Core.LoadedFile.Range.MovingRange.Height);
+				c = TTTWidth.Text.Length > 0 ? TTTWidth.Text[0] : 'W';
+				TTTWidth.Text = string.Format("{0}: {1}", c, Core.LoadedFile.Range.MovingRange.Width);
 			}
 		}
 
@@ -312,7 +317,7 @@ namespace LaserGRBL
 				TTLEstimated.Text = Strings.MainFormEstimatedTime;
 
 			MnFileOpen.Enabled = Core.CanLoadNewFile;
-			MnSaveProject.Enabled = MnAdvancedSave.Enabled = MnSaveProgram.Enabled = Core.HasProgram;
+			MnSaveProject.Enabled = MnAdvancedSave.Enabled = MnSaveProgram.Enabled = MnOptimizePath.Enabled = MnChangeScale.Enabled = Core.HasProgram;
 			MnFileSend.Enabled = Core.CanSendFile;
 			MnStartFromPosition.Enabled = Core.CanSendFile;
 			MnRunMulti.Enabled = Core.CanSendFile || Core.CanResumeHold || Core.CanFeedHold;
@@ -445,8 +450,6 @@ namespace LaserGRBL
 			GetOvMenu().Show(Cursor.Position, ToolStripDropDownDirection.AboveLeft);
 		}
 
-
-
 		internal virtual System.Windows.Forms.ContextMenuStrip GetOvMenu()
 		{
 			System.Windows.Forms.ContextMenuStrip CM = new System.Windows.Forms.ContextMenuStrip();
@@ -504,6 +507,11 @@ namespace LaserGRBL
 		private void MnSaveProject_Click(object sender, EventArgs e)
 		{
 			Core.SaveProject(this);
+		}
+
+		private void MnOptimizePath_Click(object sender, EventArgs e)
+		{
+			Core.OptimizeCommands();
 		}
 
 		private void MNEnglish_Click(object sender, EventArgs e)
@@ -993,10 +1001,15 @@ namespace LaserGRBL
 		{
 			ShowWiFiConfig();
 		}
-	}
+
+        private void MnChangeScale_Click(object sender, EventArgs e)
+        {
+			ChangeScaleForm.CreateAndShowDialog(Core, this);
+		}
+    }
 
 
-	public class MMnRenderer : ToolStripProfessionalRenderer
+    public class MMnRenderer : ToolStripProfessionalRenderer
 	{
 		public MMnRenderer() : base(new CustomMenuColor()) { }
 
